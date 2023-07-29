@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
   resources :restaurants do
+    resources :reviews, only: [:new, :create]
     collection do
       get :top
       # get "top", to: "restaurants#top", as: :top_restaurants
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
     member do
       get :chef
     end
+    resources :reviews, only: [:destroy]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
