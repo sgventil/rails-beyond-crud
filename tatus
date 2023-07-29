@@ -1,0 +1,45 @@
+[1mdiff --git a/Gemfile b/Gemfile[m
+[1mindex fe7ff1b..8412769 100644[m
+[1m--- a/Gemfile[m
+[1m+++ b/Gemfile[m
+[36m@@ -26,7 +26,7 @@[m [mgem "simple_form"[m
+ gem "stimulus-rails"[m
+ [m
+ # Build JSON APIs with ease [https://github.com/rails/jbuilder][m
+[31m-gem "jbuilder"[m
+[32m+[m[32m# gem "jbuilder"[m
+ [m
+ # Use Redis adapter to run Action Cable in production[m
+ # gem "redis", "~> 4.0"[m
+[1mdiff --git a/Gemfile.lock b/Gemfile.lock[m
+[1mindex 82d6e82..59eba8c 100644[m
+[1m--- a/Gemfile.lock[m
+[1m+++ b/Gemfile.lock[m
+[36m@@ -98,9 +98,6 @@[m [mGEM[m
+     io-console (0.6.0)[m
+     irb (1.7.4)[m
+       reline (>= 0.3.6)[m
+[31m-    jbuilder (2.11.5)[m
+[31m-      actionview (>= 5.0.0)[m
+[31m-      activesupport (>= 5.0.0)[m
+     loofah (2.21.3)[m
+       crass (~> 1.0.2)[m
+       nokogiri (>= 1.12.0)[m
+[36m@@ -218,7 +215,6 @@[m [mDEPENDENCIES[m
+   capybara[m
+   debug[m
+   importmap-rails[m
+[31m-  jbuilder[m
+   puma (~> 5.0)[m
+   rails (~> 7.0.6)[m
+   selenium-webdriver[m
+[1mdiff --git a/config/routes.rb b/config/routes.rb[m
+[1mindex 262ffd5..c55e45a 100644[m
+[1m--- a/config/routes.rb[m
+[1m+++ b/config/routes.rb[m
+[36m@@ -1,4 +1,5 @@[m
+ Rails.application.routes.draw do[m
+[32m+[m[32m  resources :restaurants[m
+   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html[m
+ [m
+   # Defines the root path route ("/")[m
