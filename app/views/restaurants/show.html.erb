@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @restaurant %>
+<%= link_to "The Chef", chef_restaurant_path(@restaurant) %>
 
 <div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
