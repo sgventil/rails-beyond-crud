@@ -14,6 +14,7 @@
       %>
     </li>
   <% end %>
+  <%= link_to "Add a Review", new_restaurant_review_path(@restaurant)%>
 </ul>
 <br>
 <hr>
@@ -21,6 +22,7 @@
 <div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
   <%= link_to "Back to restaurants", restaurants_path %>
+
 
   <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
 </div>

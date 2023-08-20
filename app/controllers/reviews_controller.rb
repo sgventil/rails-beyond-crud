@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_restaurant, only: [:new, :create]
+  before_action :set_restaurant, only: [:new, :create, :destroy]
 
   def new
     @review = Review.new
@@ -16,9 +16,9 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to restaurant_path(@review.restaurant), status: :see_other
+    review = @restaurant.reviews.find(params[:id])
+    review.destroy
+    redirect_to restaurant_path(@restaurant), status: :see_other
   end
 
   private
